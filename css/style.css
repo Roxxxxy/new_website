@@ -80,6 +80,7 @@ header {
   float: left;
 }
 
+/*========= .nav
 .nav {
   float: right;
 }
@@ -88,12 +89,14 @@ header {
   display: inline-block;
 }
 
+===========*/
 .nav li a {
   color: #fff;
   text-transform: capitalize;
   display: block;
   padding: 10px 12px;
 }
+
 /* ==========03.background image ==========*/
 
 .home_bg{
@@ -421,8 +424,58 @@ footer {
 
 /*====================== RWD =======================*/
 
+
+
+@media screen and (min-width:1024px) {
+  .menu-button,
+  .menu-button-checkbox {
+    display: none;
+  }
+}
+
 @@media screen and (max-width: 1023px) {
   .container {
     width: auto;
   }
+}
+
+.menu-button {
+  float: right;
+  font-size: 25px;
+  line-height: 40px;
+  color: white;
+  background: transparent;
+  padding: 0 15px;
+  border: 0;
+}
+
+.menu-button-checkbox {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 40px;
+  opacity: 0;
+
+}
+
+.menu-button-checkbox:checked ~ .nav {
+  display: block;
+}
+
+.nav {
+  display: none;
+  margin-top: 0;
+  padding-left: 0;
+  position: fixed;
+  right: 0;
+  top: 40px;
+  width: 100px;
+  height: 100%;
+  background: blue;
+}
+
+.nav li{
+  border: 0;
+  border-radius: 0;
 }
